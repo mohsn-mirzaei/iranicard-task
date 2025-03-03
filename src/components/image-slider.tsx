@@ -37,7 +37,7 @@ export const ImageSlider = () => {
   }, [carouselAPI, onSelect]);
 
   return (
-    <div dir="ltr" className="my-8 px-4">
+    <div dir="ltr" className="my-8 px-4 md:px-0">
       <Carousel
         plugins={[Autoplay({ delay: 2500 })]}
         opts={{ loop: true, align: "center" }}
