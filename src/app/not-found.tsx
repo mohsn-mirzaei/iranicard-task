@@ -4,9 +4,9 @@ import Link from 'next/link'
 export default function NotFound() {
   return (
     <div className='flex h-screen items-center justify-center flex-col'>
-      <h2>Not Found</h2>
-      <p>Could not find requested resource</p>
-      <Link href="/" className={buttonVariants({variant: "link"})}>Return Home</Link>
+      <h2>پیدا نشد! ۴۰۴</h2>
+      <p>صفحه مورد نظر پیدا نشد!</p>
+      <Link href="/" className={buttonVariants({variant: "link"})}>بازگشت به خانه</Link>
     </div>
   )
 }
