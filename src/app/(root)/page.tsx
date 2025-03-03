@@ -1,7 +1,9 @@
-import { Button } from "@/components/ui/button";
+import Header from "@/components/header";
 
 export default function Home() {
   return (
-   <Button>This is home page</Button>
+    <main className="min-h-screen">
+      <Header />
+    </main>
   );
 }
