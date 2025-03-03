@@ -70,7 +70,7 @@ export default function Header() {
           </div>
 
           {/* Mobile navigation - shown when hamburger is checked */}
-          <div className="md:hidden absolute top-16 left-0 right-0 shadow-md max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-56 z-10">
+          <div className="md:hidden bg-background absolute top-16 left-0 right-0 shadow-md max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-56 z-10">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navLinks.map(({ href, label }) => (
                 <Link
