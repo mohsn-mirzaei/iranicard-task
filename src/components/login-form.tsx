@@ -1,15 +1,13 @@
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import InputFloatingLabel from "./input-floating-label"
+} from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+import InputFloatingLabel from "./input-floating-label";
 
 export function LoginForm({
   className,
@@ -27,9 +25,13 @@ export function LoginForm({
         <CardContent>
           <form>
             <div className="flex flex-col gap-6">
-                <InputFloatingLabel id="phone" label="شماره تلفن" type="tel"/>
-                <InputFloatingLabel id="password" label="رمز عبور" type="password"/>
-              
+              <InputFloatingLabel id="phone" label="شماره تلفن" type="tel" />
+              <InputFloatingLabel
+                id="password"
+                label="رمز عبور"
+                type="password"
+              />
+
               <Button type="submit" className="w-full">
                 ورود
               </Button>
@@ -38,5 +40,5 @@ export function LoginForm({
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
