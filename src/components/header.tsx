@@ -61,12 +61,14 @@ export default function Header() {
                 })}
               </div>
             </div>
-            <Button
-              className="hidden md:block rounded-full"
-              variant={"outline"}
-            >
-              <Link href="/login">ورود</Link>
-            </Button>
+            <Link href="/login">
+              <Button
+                className="hidden md:block rounded-full"
+                variant={"outline"}
+              >
+                ورود
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile navigation - shown when hamburger is checked */}
