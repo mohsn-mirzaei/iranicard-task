@@ -1,9 +1,9 @@
 import FAQ from "@/entities/FAQ";
 import { notFound } from "next/navigation";
-import { FetchResponse } from "../api-client";
+import { FetchResponse } from "@/services/api-client";
 
 async function getFAQs(): Promise<FAQ[]> {
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+  const BASE_URL = process.env.NEXT_PUBLIC_PANEL_URL;
 
   if (!BASE_URL) {
     throw new Error("NEXT_PUBLIC_BASE_URL is not defined.");
