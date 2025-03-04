@@ -1,65 +1,43 @@
+"use client";
+import useMegaMenu from "@/services/mega-menus";
+import { Loader2 } from "lucide-react";
+import { Alert, AlertDescription } from "./ui/alert";
+
 export function MegaMenu() {
-    return (
-      <div className="absolute hidden group-hover:block top-full left-44 -right-52 bg-white shadow-lg rounded-b-lg z-20 w-[400px] p-4">
-        <div className="grid grid-cols-2 gap-4">
-          <div>
-            <h3 className="font-bold text-lg mb-2">دسته‌بندی‌ها</h3>
-            <ul className="space-y-1">
-              <li>
-                <a href="#" className="hover:underline">
-                  الکترونیک
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  پوشاک
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  لوازم خانگی
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  ورزشی
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  کتاب و لوازم تحریر
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg mb-2">محبوب‌ترین‌ها</h3>
-            <ul className="space-y-1">
-              <li>
-                <a href="#" className="hover:underline">
-                  محصولات جدید
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  پرفروش‌ترین‌ها
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  تخفیف‌دار
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  پیشنهاد ویژه
-                </a>
-              </li>
-            </ul>
-          </div>
+  const { data, isError, isLoading } = useMegaMenu();
+
+  return (
+    <div className="absolute hidden group-hover:block top-full left-44 -right-32 bg-white shadow-lg rounded-b-lg z-20 w-[400px] p-4">
+      {isError && (
+        <Alert variant="destructive" className="mb-4">
+          <AlertDescription>
+            خطا در دریافت اطلاعات. لطفا دوباره تلاش کنید.
+          </AlertDescription>
+        </Alert>
+      )}
+
+      {isLoading && (
+        <div className="flex justify-center items-center w-full">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
         </div>
+      )}
+
+      <div className="grid grid-cols-2 gap-4">
+        {data?.map((category) => (
+          <div key={category.id}>
+            <h3 className="font-bold text-lg mb-2">{category.menuName}</h3>
+            <ul className="space-y-1">
+              {category.symbol.map((s) => (
+                <li key={s.id}>
+                  <a href="#" className="hover:underline">
+                    {s.symbol}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-    )
-  }
-  
-  
+    </div>
+  );
+}
