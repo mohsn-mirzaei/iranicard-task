@@ -1,3 +1,4 @@
+import QueryClientProviders from "@/providers/query-client-provider";
 import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 import "./globals.css";
@@ -16,10 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body
-        className={`${vazirmatn.className} antialiased`}
-      >
-        {children}
+      <body className={`${vazirmatn.className} antialiased`}>
+        <QueryClientProviders>{children}</QueryClientProviders>
       </body>
     </html>
   );
