@@ -43,7 +43,7 @@ export function LoginForm({
   const onSubmit = async (values: LoginFormSchema) => {
     mutate(values, {
       onSuccess: () => {
-        router.refresh();
+        router.push("/wallets");
       },
     });
   };
