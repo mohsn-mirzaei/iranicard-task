@@ -2,12 +2,11 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { MegaMenu } from "./mega-manu";
 import { Button } from "./ui/button";
-import { Menu } from "lucide-react";
+import { Menu, Wallet } from "lucide-react";
 
 const navLinks = [
   { label: "خانه", href: "/" },
   { label: "ولت‌ها", href: "/wallets" },
-  { label: "اضافه کردن ولت", href: "/add-wallet" },
   { label: "ورود", href: "/login" },
 ];
 
@@ -26,8 +25,12 @@ export default function Header() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-6 justify-between w-full md:w-fit">
               <div className="flex items-center">
-                <Link href="/" className="text-xl font-bold">
-                  لوگو
+                <Link
+                  href="/"
+                  className="text-xl font-bold items-center flex gap-2"
+                >
+                  <Wallet className="h-6 w-6 text-primary" />
+                  <span>ولت استور</span>
                 </Link>
               </div>
 
@@ -42,7 +45,9 @@ export default function Header() {
                   if (href === "/wallets") {
                     return (
                       <div key={label} className="relative group">
-                        <span className={cn(linkStyle.default)}>ولت ها</span>
+                        <Link href={href} className={cn(linkStyle.default)}>
+                          ولت ها
+                        </Link>
                         <MegaMenu />
                       </div>
                     );

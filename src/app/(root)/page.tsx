@@ -1,6 +1,5 @@
 import { CustomAccordion } from "@/components/custom-accordion";
 import CustomerList from "@/components/customer-list";
-import Header from "@/components/header";
 import { ImageSlider } from "@/components/image-slider";
 import getFAQs from "@/services/faqs";
 
@@ -9,7 +8,6 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen">
-      <Header />
       <ImageSlider />
       <div className="container mx-auto px-4 py-8 space-y-12">
         <section className="py-8">
