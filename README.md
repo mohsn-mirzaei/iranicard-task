@@ -1,5 +1,26 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# Next.js 15 Project
+
+This project is built with Next.js 15 and is ready for local development as well as production deployment.
+
+## Prerequisites
+
+- **Node.js** (version 14 or above is recommended)
+- **npm** or **yarn** (for package management)
+
+## Copy and configure the environment file
+
+An example.env file is provided. Please copy it to a new file named .env and replace the placeholder values with your actual configuration.
+
+## Install dependencies
+
+Using npm or yarn:
+
+```bash
+npm install
+```
+
 ## Getting Started
 
 First, run the development server:
