@@ -1,0 +1,23 @@
+خلاصه توسعه:
+اولین Commit پروژه
+افزودن مستندات پروژه (ProjectInstructions.md)
+راه‌اندازی ShadCN/UI
+راه‌اندازی صفحات اولیه
+پیاده‌سازی Middleware برای احراز هویت
+پیاده‌سازی صفحه ورود
+ساخت کامپوننت Input Floating Label مشابه MUI v3 و به‌روزرسانی فیلدهای ورود
+اصلاح مشکل تایپی در Middleware
+ترجمه صفحات خطا و یافت نشد به فارسی
+ساخت کامپوننت Header همراه با Mega-menu
+ساخت کامپوننت ImageSlider
+رفع مشکل Padding در کامپوننت ImageSlider
+رفع مشکل دکمه ورود در Header
+راه‌اندازی React Query Tanstack و پیاده‌سازی api-client
+پیاده‌سازی ISR برای دریافت داده‌های FAQ
+پیاده‌سازی CSR برای دریافت لیست مشتریان و ساخت CustomerList
+پیاده‌سازی baseUrl داینامیک
+حذف import‌های بلااستفاده در Login Form
+پیاده‌سازی CSR برای دریافت داده‌های Mega-menu
+به‌روزرسانی Header، ساخت Footer و افزودن Toast زودتر از قبل
+به‌روزرسانی کامپوننت ImageSlider
+پایان کار ✅
