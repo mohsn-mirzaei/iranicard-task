@@ -1,13 +1,18 @@
 import { Input } from "@/components/ui/input";
-import { HTMLInputTypeAttribute, useId } from "react";
+import { HTMLInputTypeAttribute } from "react";
 
-interface props {
+interface props extends React.InputHTMLAttributes<HTMLInputElement> {
   id: string;
   label: string;
   type: HTMLInputTypeAttribute;
 }
 
-export default function InputFloatingLabel({id, label, type}: props) {
+export default function InputFloatingLabel({
+  id,
+  label,
+  type,
+  ...props
+}: props) {
   return (
     <div className="group relative">
       <label
@@ -16,7 +21,7 @@ export default function InputFloatingLabel({id, label, type}: props) {
       >
         <span className="inline-flex bg-background px-2">{label}</span>
       </label>
-      <Input id={id} type={type} placeholder=" " />
+      <Input id={id} type={type} placeholder=" " {...props} />
     </div>
   );
 }

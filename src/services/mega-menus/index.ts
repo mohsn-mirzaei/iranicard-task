@@ -1,16 +1,8 @@
+import MegaMenus from "@/entities/MegaMenus";
 import APIClient from "@/services/api-client";
 import { useQuery } from "@tanstack/react-query";
 
-type MegaMenus = {
-  id: number;
-  menuName: string;
-  symbol: {
-    id: number;
-    symbol: string;
-  }[];
-};
-
-const apiClient = new APIClient<MegaMenus>(
+const apiClient = new APIClient<any, MegaMenus>(
   "/api/mega-menus?populate=*",
   process.env.NEXT_PUBLIC_PANEL_URL
 );
